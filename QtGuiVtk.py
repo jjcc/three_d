@@ -1,10 +1,11 @@
 import sys
 import random
-from PySide2 import QtCore, QtWidgets, QtGui
+from PyQt6 import QtCore, QtWidgets, QtGui
 
-import PySide2.QtCore
+import PyQt6.QtCore
 import vtk
-from vtk.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
+
+from vtkmodules.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -60,7 +61,7 @@ class MyWidget0(QtWidgets.QWidget):
         self.text.setText(random.choice(self.hello))
 
     def print_inf(self):
-        print(PySide2.__version__)
+        print(PyQt6.__version__)
         print(QtCore.__version__)
 
 class MyWidget(QVTKRenderWindowInteractor):
@@ -109,7 +110,7 @@ def QVTKRenderWidgetConeExample():
     # show the widget
     widget.show()
     # start event processing
-    app.exec_()
+    app.exec()
 
 if __name__ == "__main__":
 
