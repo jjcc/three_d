@@ -1,11 +1,8 @@
 import sys
-import random
-from PySide2 import QtCore, QtWidgets
-import PySide2.QtWidgets
 
-from  PySide2.QtWidgets import *
+from  PyQt6.QtWidgets import *
 import vtk
-from vtk.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
+from vtkmodules.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
 
 qt_app = QApplication(sys.argv)
 
@@ -94,7 +91,7 @@ class LayoutExample(QWidget):
         # Show the form
         self.show()
         # Run the qt application
-        qt_app.exec_()
+        qt_app.exec()
 
 
     def create_vtkw(self):
